@@ -19,10 +19,11 @@
     align-items: center;
     align-content: center;
     justify-content: center;
-    h1 {
-    }
-    p {
-    }
+    // h1 {
+     
+    // }
+    // p {
+    // }
     .input {
       display: flex;
       flex-direction: column;
@@ -68,7 +69,7 @@
       font-size: 14px;
       font-weight: 300;
     }
-    .login_b {
+    .login_b1 {
       width: 250px;
       height: 35px;
       background: rgb(176, 35, 95);
@@ -86,6 +87,32 @@
       a {
         text-decoration: none;
         color: white;
+        font-size: 16px;
+        font-weight: 400;
+      }
+    }
+    .login_b2 {
+      width: 250px;
+      height: 35px;
+      background: none;
+      border: 1px solid grey;
+      border-radius: 5px;
+      cursor: pointer;
+      &:hover {
+        background: rgb(176, 35, 95);
+        background: linear-gradient(
+        0deg,
+        rgba(176, 35, 95, 1) 0%,
+        rgba(250, 114, 104, 1) 100%
+      );
+        border: none;
+        a{
+          color: white;
+        }
+      }
+      a {
+        text-decoration: none;
+        color: rgb(229, 32, 32);
         font-size: 16px;
         font-weight: 400;
       }
