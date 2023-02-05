@@ -16,7 +16,7 @@
                 <p>Enter your credentials</p>
                 <div class="input">
                     <div class="user">
-                        <input type="text" name="name" class="username" placeholder="Username">
+                        <input type="text" name="name" class="username" placeholder="Username" onblur="onBlur()" id="username">
                         <img src="../Src/scss/img/user.png" alt="">
                     </div>
                     <div class="email_list">
@@ -24,11 +24,12 @@
                         <img src="../Src/scss/img/mail.png" alt="">
                     </div>
                     <div class="password_list">
-                        <input type="text" name="password" class="password" placeholder="Confirm Password">
+                        <input type="password" name="password" class="password" placeholder="Confirm Password" autocomplete="current-password">
                         <img src="../Src/scss/img/view.png" alt="" class="password_control">
                     </div>
                     <div class="password_list">
-                        <input type="text" name="password" class="password" placeholder="Password">
+                        <input type="password" name="password" class="password" placeholder="Password" 
+                        autocomplete="current-password">
                         <img src="../Src/scss/img/view.png" alt="" class="password_control">
                     </div>
                 </div>
@@ -39,5 +40,11 @@
             </div>
         </section>
     </main>
+    <script>
+            function onBlur() {
+            let x = document.getElementById("username");
+            x.value = x.value.toUpperCase();
+        }
+    </script>
 </body>
 </html>

@@ -16,21 +16,28 @@
                 <p>Enter your credentials</p>
                 <div class="input">
                     <div class="user">
-                        <input type="text" name="name" class="username" placeholder="Username">
+                        <input type="text" name="name" class="username" placeholder="Username" onblur="onBlur()" id="username">
                         <img src="../Src/scss/img/user.png" alt="">
                     </div>
                  <div class="password_list">
-                    <input type="text" name="password" class="password" placeholder="Password">
-                    <img src="../Src/scss/img/view.png" alt="" class="password_control">
+                    <input type="password" name="password" class="password" placeholder="Password" id="password" autocomplete="current-password">
+                    <img src="../Src/scss/img/view.png" alt="" class="password_control" onclick="password()" style="cursor: pointer;">
                  </div>
                 </div>
                 <a href="#">Forgot your password?</a>
                 <button class="login_b1"><a href="#">LOGIN</a></button>
                 <button class="login_b2"><a href="../Public/signup.html">SIGN UP</a></button>
-             
+
             </div>
         </section>
     </main>
- 
+    <script>
+
+        function onBlur() {
+            let x = document.getElementById("username");
+            x.value = x.value.toUpperCase();
+        }
+        
+    </script>
 </body>
 </html>
