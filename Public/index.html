@@ -16,17 +16,17 @@
                 <p>Enter your credentials</p>
                 <div class="input">
                     <div class="user">
-                        <input type="text" name="name" class="username" placeholder="Username" onblur="onBlur()" id="username">
-                        <img src="../Src/scss/img/user.png" alt="">
+                        <input type="text" name="name" class="username" placeholder="Username" onblur="onBlur()" id="username" maxlength="9" minlength="4">
+                        <img src="../Src/scss/img/user.png" alt="" >
                     </div>
                  <div class="password_list">
-                    <input type="password" name="password" class="password" placeholder="Password" id="password" autocomplete="current-password">
+                    <input type="password" name="password" class="password" placeholder="Password" id="password" autocomplete="current-password" maxlength="12" minlength="6">
                     <img src="../Src/scss/img/view.png" alt="" class="password_control" onclick="password()" style="cursor: pointer;">
                  </div>
                 </div>
                 <a href="#">Forgot your password?</a>
-                <button class="login_b1"><a href="#">LOGIN</a></button>
-                <button class="login_b2"><a href="../Public/signup.html">SIGN UP</a></button>
+                <button class="login_b1" id="login" onclick="loginFunction()" ><a href="#" onclick="loginFunction()">LOGIN</a></button>
+                <button class="login_b2" id="signUp"><a href="../Public/signup.html">SIGN UP</a></button>
 
             </div>
         </section>
@@ -37,6 +37,35 @@
             let x = document.getElementById("username");
             x.value = x.value.toUpperCase();
         }
+
+        var password = document.getElementById('password').value;
+        var userName = document.getElementById('username').value;
+        var login = document.getElementById("login").value;
+        var signUp = document.getElementById("signUp").value;
+
+        function loginFunction() {
+
+            
+        if (userName.value == ""){
+
+        window.alert("Please enter your username.");  
+        return false
+
+        }
+
+        if (pasword.value == ""){
+
+        window.alert("Please enter your pasword.");  
+        return false
+
+        }
+    }
+
+
+
+
+
+
         
     </script>
 </body>
